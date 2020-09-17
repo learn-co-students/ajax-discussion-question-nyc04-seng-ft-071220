@@ -1,6 +1,7 @@
-const fullname = document.getElementById("fullname");
-console.log("CONTENT NOT YET LOADED!", fullname); //what will fullname evaluate to?
+function fetchData(){
+  let data = fetch('https://randomuser.me/api/')
+    .then( res => res.json() )
+    .then( console.log )
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("CONTENT LOADED!");
-});
+fetchData()
